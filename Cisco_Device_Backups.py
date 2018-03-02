@@ -130,7 +130,7 @@ except Exception, e:
     print ('Cannot access FTP server. Cannot proceed further.\n')
     sys.exit()
 else:
-    ftp.cwd(rootdir)
+    ftp.cwd(ftp_root)
     ftp_filelist= []
     ftp.retrlines('NLST',ftp_filelist.append)
     if string_date not in ftp_filelist:
